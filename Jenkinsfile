@@ -11,7 +11,7 @@ pipeline {
 
         steps{
                 sh "yarn"
-                sh "yarn test"  
+                sh "yarn playwright test"  
             }  
             
         }
