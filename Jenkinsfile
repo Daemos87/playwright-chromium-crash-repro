@@ -9,6 +9,10 @@ pipeline {
     stages {      
       stage("TEST STAGE"){
 
+        environment {
+            DEBUG="pw:browser,pw:api,pw:protocol"
+        }
+
         steps{
                 sh "yarn"
                 sh "yarn playwright test"  
