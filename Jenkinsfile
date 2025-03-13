@@ -10,6 +10,8 @@ pipeline {
       stage("TEST STAGE"){
 
         environment {
+            XDG_CONFIG_HOME="/tmp/.chromium"
+            XDG_CACHE_HOME="/tmp/.chromium"
             DEBUG="pw:browser,pw:api,pw:protocol"
         }
 
