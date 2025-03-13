@@ -16,7 +16,8 @@ export default defineConfig({
     locale: "en-GB",
     viewport: null,
     headless: !!process.env.CI,
-    screenshot: "only-on-failure",
-    trace: "off",
+    launchOptions: {
+      args: ['--disable-gpu', '--disable-dev-shm-usage']
+    }
   },
 });
